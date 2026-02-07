@@ -1,3 +1,14 @@
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+
+  preloader.style.transition = "opacity 0.6s ease";
+  preloader.style.opacity = "0";
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 600);
+});
+
 const panel = document.getElementById("sidePanel");
 const btnSearch = document.getElementById("btnSearch");
 
@@ -52,3 +63,4 @@ document.getElementById("movieImg").src = data.Poster;
 panel.addEventListener("click", () => {
     panel.style.width = "0";
 });
+
